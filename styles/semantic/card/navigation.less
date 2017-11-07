@@ -1,0 +1,52 @@
+.card {
+
+  > .tabs + .deck > .card:not(.selected) {
+    display: none;
+  }
+
+  .navigation-links {
+    label {
+      display: flex;
+      flex-direction: column;
+      span {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .navigation {
+
+    &.tabs ul {
+      border-bottom: 1px solid @tabbedNavBorderColor;
+      padding: 0 5px;
+      background: @tabbedNavBackgroundColor;
+      display: flex;
+
+      > li {
+        flex: 1 1 auto;
+        margin: 0 1px -1px;
+        text-align: center;
+
+        > a {
+          display: block;
+          padding: 8px 12px;
+          border: 1px solid transparent;
+          border-radius: 4px 4px 0px 0px;
+          line-height: 20px;
+
+          &:hover, &:focus {
+            border-color: @tabbedNavHoverBackgroundColor @tabbedNavHoverBackgroundColor @tabbedNavBorderColor;
+            background-color: @tabbedNavHoverBackgroundColor;
+          }
+
+          &.selected {
+            background: @tabbedNavActiveBackgroundColor;
+            color: @tabbedNavActiveTextColor;
+            border-color: @tabbedNavBorderColor @tabbedNavBorderColor transparent;
+          }
+        }
+      }
+
+    }
+  }
+}

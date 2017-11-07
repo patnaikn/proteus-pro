@@ -1,0 +1,32 @@
+//it's all illusion
+@negativemask: -99999em;
+
+//currently styled to take effect on body element
+body {
+    opacity: 1;
+}
+
+body.wait {
+    opacity: 0.6;
+    transition: opacity 5s ease-out;
+}
+
+body.wait:before {
+    align-items: center;
+    background: fade(@white, 5%);
+    bottom: @negativemask;
+    content: "\f110";
+    display: flex;
+    font-family: FontAwesome;
+    font-size: 30px;
+    font-weight: bold;
+    justify-content: center;
+    left: @negativemask;
+    position: fixed;
+    right: @negativemask;
+    top: @negativemask;
+    text-align: center;
+    text-shadow: 1px 1px 1px #FFF;
+    z-index: 99999;
+    .icon-spin(); //reusing font-awesome animation
+}

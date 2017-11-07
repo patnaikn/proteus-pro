@@ -1,0 +1,17 @@
+{
+    "type": "theme",
+    "name": "edge-proteus",
+    "label": "Edge Configuration Theme",
+    "bootstrapVersion": 1.0,
+    "themeVersion": 1.0,
+    "screenShot": "wireframe.png",
+    "active": true,
+    "directives": [],
+    "start": "edge-proteus.less",
+    "includes": [
+        "edge-base"
+    ],
+    "imports": [
+        "edge-design"
+    ]
+}

@@ -1,0 +1,45 @@
+.accordion-section {
+  margin-left: -10px;
+}
+
+.accordion-heading {
+  border-bottom: 1px solid lighten(@black, 80);;
+  cursor: pointer;
+  display: block;
+  padding: 12px 0 12px 10px;
+  user-select: none;
+
+  &:after {
+    content: "\f078";
+    font-family: FontAwesome;
+    float: right;
+  }
+}
+
+.accordion-input:checked + .accordion-heading {
+  border: none;
+
+  &:after {
+    content: "\f077";
+  }
+}
+
+.accordion-input {
+  display: none;
+}
+
+.accordion-properties {
+  box-sizing: border-box;
+  height: 0px;
+  overflow: hidden;
+  opacity: 0.3;
+  transition: opacity 0.6s ease-in;
+  transition-delay: 0s;
+}
+
+.accordion-input:checked ~ .accordion-properties {
+  opacity: 1;
+  height: auto;
+  overflow: visible;
+  padding: 0 20px;
+}

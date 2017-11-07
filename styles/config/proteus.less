@@ -1,0 +1,162 @@
+.proteus {
+
+    font-size:1.1em;
+    line-height:1.5em;
+    margin:15px;
+
+    h1, h2, h3, h4, h5, h6 {
+        margin:.5em 0;
+    }
+
+    ul {
+        margin: .5em 1em;
+    }
+
+    select,
+    textarea,
+    input:not([type="checkbox"]):not([type="radio"]),
+    .uneditable-input,
+    [contenteditable] {
+        height: inherit;
+        width:auto;
+    }
+
+    &.browser {
+        section {
+            border-bottom: 1px dashed #123456;
+            margin-bottom:1.5em;
+        }
+        .autocomplete{
+            .dropdown-wrapper{
+                .open{
+                    position: relative;
+                    top: -11px;
+                    left: 0px
+                }
+            }
+        }
+
+        #search{
+            width: 340px;
+        }
+    }
+
+    details > summary {
+        cursor: pointer;
+    }
+
+    &.creator, &.updater {
+
+        div[name=properties], div[name=links], ul.array li {
+            background-color: rgba(102, 102, 102, 0.1);
+            border: 1px dashed #ccc;
+            padding:.5em;
+        }
+
+        ul.array li {
+        }
+
+        label {
+            display: flex;
+            flex-direction: row;
+            span {
+
+                display:inline-block;
+
+                &:not(.field) {
+                    margin-right:.25em;
+                }
+            }
+        }
+
+        footer {
+
+            display:flex;
+            flex-direction:row;
+
+            input[type=submit] {
+               margin:2em;
+            }
+
+            input[name=submit] {
+                font-weight:bold;
+                width:15em;
+            }
+
+            input[name=cancel] {
+                opacity: .75;
+                width:10em;
+            }
+        }
+    }
+
+}
+
+.autocomplete-wrapper{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.autocomplete {
+    position: relative;
+
+    .dropdown-wrapper {
+
+        .open {
+            position: absolute;
+            top: 26px;
+            left: 36px;
+            right: 0;
+            max-height: 200px;
+            overflow-y: scroll;
+            width: 340px;
+            background-color: white;
+            z-index: 999;
+            border: 1px solid #cecece;
+
+            ul {
+                margin: 0;
+
+                li {
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid #cecece;
+                    cursor: pointer;
+                    padding: 0 8px;
+                    outline : none;
+
+                    .name {
+                        font-size: 1rem;
+                        font-weight: bold;
+                    }
+
+                   .id,.owner {
+                        font-size: 0.8rem;
+                        font-weight: lighter;
+                        color: grey;
+                        opacity: 0.9;
+                    }
+
+                    &:hover {
+                        background-color: #cecece;
+                    }
+                    &:focus {
+                        background-color: #cecece;
+                    }
+
+                }
+            }
+        }
+
+        .closed {
+            display: none;
+        }
+
+        .message {
+            padding: 0 10px;
+        }
+    }
+}

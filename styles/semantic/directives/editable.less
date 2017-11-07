@@ -1,0 +1,33 @@
+[base-editable] {
+
+  [base-editable-content], [base-editable-controls] {
+    // Hide content editor by default
+    display: none;
+  }
+
+  // Fallback
+  &.base-editable-enabled {
+    // Show content editor when feature is enabled
+    [base-editable-content], [base-editable-controls] {
+      display: block;
+    }
+
+    // Hide input field when feature is enabled
+    [base-editable-field] {
+      display: none;
+    }
+  }
+
+  // Content Editable Field
+  [base-editable-content] {
+    // override ul/ol styles to show bullets in content pane
+    ul, ol {
+      margin: 0;
+      padding: 0 0 10px 25px;
+    }
+
+    ul {
+      list-style: inherit;
+    }
+  }
+}

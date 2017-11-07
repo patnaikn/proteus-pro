@@ -1,0 +1,165 @@
+/* Specific to configuration pane */
+html:not(.view-dashboard) {
+
+  .card {
+
+    display: flex;
+    flex-direction: column;
+
+    &.l2 {
+      padding: 10px;
+    }
+
+    &.l3 {
+      padding: 10px;
+      border: 1px solid @cardOutlineBorderColor;
+
+      &.removeBorder {
+        border: none;
+        padding: 0;
+      }
+    }
+
+    &.l4 {
+      > .content {
+        .media {
+          display: none;
+        }
+      }
+    }
+  }
+
+}
+
+/* Dashboard Specific */
+section.base-view-dashboard {
+
+  a {
+
+    color: @baseTextColor;
+
+    &:hover {
+      color: @baseTextColor;
+    }
+
+  }
+
+  .card {
+
+    .media {
+      background: @gray;
+      color: @grayLighter;
+      width: 130px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    &.l1 {
+      padding: 30px;
+    }
+
+    &.l2 {
+
+      > .content {
+
+        text-align: center;
+
+        .title {
+          font-size: 35.75px;
+          margin: 0 0 30px 0;
+          text-transform: capitalize;
+          color: @headingFontColor;
+        }
+
+      }
+
+    }
+
+    &.l3 {
+
+      > .deck {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      > .content {
+
+        > .link {
+          display: none;
+        }
+
+      }
+
+    }
+
+    &.l4 {
+
+      margin-bottom: 30px;
+      width: 25%;
+
+      &:first-child {
+
+        border-bottom: 4px solid @cardOutlineBorderColor;
+        display: flex;
+        flex: 0 1 100%;
+        justify-content: center;
+        padding-bottom: 30px;
+
+        .media {
+          height: 135px;
+          width: 98px;
+        }
+
+      }
+
+      > .content {
+
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        > .link {
+
+          i {
+            display: none;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+/* Config homepage specific*/
+section.base-view-siteOutline {
+
+  .card {
+
+    &.l2 {
+      > .content {
+        display: none;
+      }
+    }
+
+    &.l3 {
+      padding: 0;
+      border: none;
+    }
+
+    &.l4 {
+      &:first-child {
+        border-bottom: 1px solid @cardOutlineBorderColor;
+        margin-bottom: 22px;
+        padding-bottom: 8px;
+      }
+    }
+  }
+}

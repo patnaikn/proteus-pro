@@ -1,0 +1,298 @@
+/* Specific to configuration pane */
+html:not(.view-dashboard) {
+  .card {
+
+    > .content {
+      display: flex;
+    }
+
+    > .horizontal-line {
+      border-bottom: 2px solid @inputBorderColor;
+      margin-bottom: 15px;
+    }
+
+    &.l2, &.l4 {
+      > .content {
+        border: 1px solid @cardOutlineBorderColor;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 30px 15px;
+
+        &.selected {
+          border: 3px solid @infoTextColor;
+        }
+
+        .link {
+          display: flex;
+          width: 100%;
+          a {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+          }
+          
+          a + a {
+              flex: 0 1 0%;
+              visibility: hidden;
+              padding: 0 0 0 10px;
+          }
+
+          &:hover a + a {
+              visibility: visible;
+          }
+
+          a.show {
+              visibility: visible;
+          }
+
+          i {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    &.l2 {
+      > .content {
+        background: @headerBackgroundColor;
+        border-radius: 4px 4px 0 0;
+        box-sizing: border-box;
+        padding: 15px;
+        margin-bottom: -1px;
+        min-height: 60px;
+
+        > .title {
+          font-weight: bold;
+        }
+      }
+
+    }
+
+    &.l3 {
+      > .content {
+        flex-direction: column;
+        order: 2;
+
+        .link {
+          display: flex;
+        }
+
+        .link a {
+          display: block;
+          margin: 0;
+        }
+      }
+    }
+
+    &.l3 {
+
+    }
+
+    &.l4 {
+      > .content {
+        .contentBox();
+      }
+
+
+
+
+    }
+
+    &.configurator {
+      padding: 10px;
+
+      .copy {
+        width: 100%;
+      }
+
+      .actions {
+        margin-top: 10px;
+        legend {
+          display: none;
+        }
+      }
+    }
+
+    .content {
+      .config-media {
+        > ul {
+          display: flex;
+          flex-wrap: wrap;
+
+          li {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin: 0 3% 15px 0;
+            width: 30%;
+
+            figure {
+              margin: 0;
+            }
+
+            img {
+              box-sizing: border-box;
+              display: block;
+              height: 100%;
+              margin: 0 0 5px 0;
+              width: 100%;
+              opacity: 0.2;
+
+              &[src^="http://media"] {
+                opacity: 1;
+              }
+            }
+
+            a {
+              display: block;
+              font-size: 11px;
+            }
+          }
+        }
+
+      }
+
+        .config-hyperlink {
+            > ul {
+                li {
+
+                    a {
+
+                    }
+                }
+            }
+            .card-link{
+                >.content{
+                    display: flex;
+                    border: 1px solid @cardOutlineBorderColor;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    .contentBox();
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    .link{
+                        display: flex;
+                        width:100%;
+                        a {
+                            align-items: center;
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .config-themes {
+        ul {
+          li {
+            figure {
+              color:@gray;
+              margin: 10px 0px;
+              img {
+                width: 360px;
+                height: 100px;
+                margin: 0px;
+                &.selected {
+                  border: 3px solid @infoTextColor;
+                }
+                &.clickable{
+                  cursor:pointer;
+                }
+              }
+              figcaption {
+                width: 300px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  // Mixins //
+  .contentBox {
+
+    background: @cardOutlineBackgroundColor;
+    margin-bottom: 15px;
+    padding: 20px 15px 20px 35px;
+    box-sizing: border-box;
+    position: relative;
+
+    &:after {
+      content: "\f09e";
+      font-family: FontAwesome;
+      display: block;
+      background: #E0EEff;
+      color: #255590;
+      position: absolute;
+      text-align: center;
+      width: 25px;
+      padding-top: 20px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 4px 0 0 4px;
+      box-shadow: inset -1px 0 3px rgba(0, 0, 0, 0.05);
+    }
+
+    a {
+      span {
+        font-weight: bold;
+        color: @gray;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        width: 220px;
+
+        &.selectcard {
+          width: 280px;
+        }
+      }
+    }
+
+    &.count-, &.count-none, &.card, &.count-none {
+      box-shadow: none;
+
+      &:after {
+        content: "";
+        background: #f5f5f5;
+      }
+    }
+
+  }
+
+  #linkSelector {
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 100%;
+    border:none;
+    z-index: 2;
+  }
+
+  .hide {
+    display: none !important;
+  }
+  .search-input {
+    padding-left: 30px;
+  }
+  .search-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .search {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+  }
+}
+/* Dashboard Specific */
+html.view-dashboard {
+
+}
+

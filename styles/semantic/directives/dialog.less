@@ -1,0 +1,26 @@
+// TODO: dialog should be directive
+[base-dialog] {
+    display: none;
+    z-index: 999999;
+    background: fade(@black, 40%);;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    > section {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        position: fixed;
+        border: 1px solid #ccc;
+        background: #FFF;
+        width: 90%;
+    }
+}
+
+[base-dialog="show"] {
+    display: block;
+}

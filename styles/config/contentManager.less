@@ -1,0 +1,144 @@
+.cms {
+
+    &.browser {
+
+        .l1 {
+
+        }
+
+        .l2 {
+
+        }
+
+        .l3 {
+
+        }
+
+        .l4 {
+
+        }
+
+        .l5 {
+
+        }
+
+        .l6 {
+
+        }
+
+    }
+
+    &.listings {
+
+        .l1 {
+
+        }
+
+        .l2 {
+            .deck {
+                display: flex;
+                flex-direction: row;
+                flex-wrap:wrap;
+                align-items: center;
+                justify-content: flex-start;
+            }
+
+        }
+
+        .l3 {
+
+            background: @cardOutlineBackgroundColor;
+            box-sizing: border-box;
+            font-size: 1.2em;
+            font-weight:normal;
+            height:100px;
+            margin:5px;
+            position: relative;
+            width:150px;
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+
+            > a {
+                color: #525252;
+                &:after {
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    height:100%;
+                    width:100%;
+                    content: " ";
+                }
+            }
+
+            &.add {
+
+                text-align: center;
+
+                > a {
+                    color: #E0EEff;
+                    font-size: 8em;
+                }
+            }
+        }
+
+        .l4 {
+
+        }
+
+        .l5 {
+
+        }
+
+        .l6 {
+
+        }
+
+    }
+
+    &.editor {
+
+        section[name=attributes] {
+
+            h3 {
+                display: none;
+            }
+
+            ul li {
+                margin-bottom:2em;
+            }
+        }
+
+        form {
+
+            margin: 3em auto;
+            width: 60%;
+
+            span.link { display:none; }
+            span.name {
+                font-size: 1.5em;
+                font-weight:bold;
+            }
+        }
+
+        footer {
+
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            input[name=submit] {
+                font-weight:bold;
+                width:60%;
+            }
+
+            input[name=cancel] {
+                opacity: .75;
+                width:25%;
+            }
+        }
+
+    }
+}
